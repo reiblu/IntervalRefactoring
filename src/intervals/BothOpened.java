@@ -18,7 +18,17 @@ public class BothOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		// TODO Auto-generated method stub
+		switch(interval.getOpening()){
+		case BOTH_OPENED:
+			return this.minimum <= interval.minimum && this.maximum >= interval.maximum;
+		case RIGHT_OPENED:
+			return this.minimum < interval.minimum && this.maximum >= interval.maximum;
+		case LEFT_OPENED:
+			return this.minimum <= interval.minimum && this.maximum > interval.maximum;
+		case UNOPENED:
+			return this.minimum < interval.minimum && this.maximum > interval.maximum;
+		
+		}
 		return false;
 	}
 
