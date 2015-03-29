@@ -1,5 +1,11 @@
 package intervals;
 
-public class Punto {
+public abstract class Punto {
+	
+	private double valor;
+	
+	public Punto (double valor){
+		this.valor = valor;
+	}
 
 }
