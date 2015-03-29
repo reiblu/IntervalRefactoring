@@ -26,11 +26,11 @@ public abstract class Punto {
 	
 	public abstract boolean lessOrEquals(Punto punto);
 
-	public abstract boolean isGreaterOrEqualsThan(Desde desde);
+	public abstract boolean isGreaterOrEqualsThan(Desde punto);
 	
-	public abstract boolean isGreaterOrEqualsThan(Hasta desde);
+	public abstract boolean isGreaterOrEqualsThan(Hasta punto);
 	
-	public abstract boolean isGreaterOrEqualsThan(Exacto desde);
+	public abstract boolean isGreaterOrEqualsThan(Exacto punto);
 
 	public abstract boolean greaterOrEquals(Punto punto);
 	

@@ -48,50 +48,42 @@ public class Desde extends Punto {
 
 	@Override
 	public boolean lessOrEquals(Punto punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return punto.isGreaterOrEqualsThan(this);
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Desde desde) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isGreaterOrEqualsThan(Desde punto) {
+		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Hasta desde) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isGreaterOrEqualsThan(Hasta punto) {
+		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Exacto desde) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isGreaterOrEqualsThan(Exacto punto) {
+		return this.valor == punto.valor;
 	}
 
 	@Override
 	public boolean greaterOrEquals(Punto punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return punto.isLessOrEquals(this);
 	}
 
 	@Override
 	public boolean isLessOrEquals(Desde punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
 	}
 
 	@Override
 	public boolean isLessOrEquals(Hasta punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
 	}
 
 	@Override
 	public boolean isLessOrEquals(Exacto punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.valor == punto.valor;
 	}
 
 	
