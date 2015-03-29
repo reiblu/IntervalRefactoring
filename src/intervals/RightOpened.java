@@ -18,32 +18,28 @@ public class RightOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return interval.includes(this);
+		return interval.isIncluded(this);
 
 	}
 
 	@Override
-	public boolean includes(BothOpened interval) {
-		return this.minimum <= interval.minimum
-				&& this.maximum >= interval.maximum;
+	public boolean isIncluded(BothOpened interval) {
+		return this.minimum > interval.minimum && this.maximum <= interval.maximum;
 	}
 
 	@Override
-	public boolean includes(RightOpened interval) {
-		return this.minimum <= interval.minimum
-				&& this.maximum >= interval.maximum;
+	public boolean isIncluded(RightOpened interval) {
+		return this.minimum >= interval.minimum && this.maximum <= interval.maximum;
 	}
 
 	@Override
-	public boolean includes(LeftOpened interval) {
-		return this.minimum <= interval.minimum
-				&& this.maximum > interval.maximum;
+	public boolean isIncluded(LeftOpened interval) {
+		return this.minimum > interval.minimum && this.maximum <= interval.maximum;
 	}
 
 	@Override
-	public boolean includes(UnOpened interval) {
-		return this.minimum <= interval.minimum
-				&& this.maximum > interval.maximum;
+	public boolean isIncluded(UnOpened interval) {
+		return this.minimum >= interval.minimum && this.maximum <= interval.maximum;
 	}
 
 }
