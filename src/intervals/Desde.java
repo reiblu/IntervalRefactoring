@@ -8,26 +8,27 @@ public class Desde extends Punto {
 
 	@Override
 	public boolean isGreater(Punto punto) {
-		// TODO Auto-generated method stub
+		return punto.isLessThan(this);
+	}
+
+	@Override
+	public boolean isLessThan(Desde punto) {
+		return this.valor < punto.valor ;
+	}
+
+	@Override
+	public boolean isLessThan(Hasta punto) {
 		return false;
 	}
 
 	@Override
-	public boolean isGreater(Desde punto) {
-		// TODO Auto-generated method stub
+	public boolean isLessThan(Exacto punto) {
 		return false;
 	}
 
 	@Override
-	public boolean isGreater(Hasta punto) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isGreater(Exacto punto) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean lessOrEquals(Punto punto) {
+		return punto.isGreaterOrEquals(this);
 	}
 
 }
