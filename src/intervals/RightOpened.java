@@ -10,6 +10,16 @@ public class RightOpened extends Interval{
 	public Opening getOpening() {
 		return Opening.RIGHT_OPENED;
 	}
+
+	@Override
+	public boolean includes(double value) {
+		return (this.minimum <= value) && (this.maximum > value);
+	}
+
+	@Override
+	public boolean includes(Interval interval) {
+		return false;
+	}
 	
 	
 

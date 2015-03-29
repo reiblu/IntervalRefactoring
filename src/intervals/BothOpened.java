@@ -11,4 +11,15 @@ public class BothOpened extends Interval {
 		return Opening.BOTH_OPENED;
 	}
 
+	@Override
+	public boolean includes(double value) {
+		return (this.minimum < value) && (this.maximum > value);
+	}
+
+	@Override
+	public boolean includes(Interval interval) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
