@@ -21,6 +21,14 @@ public abstract class Interval {
 	public abstract boolean includes(double value);
 
 	public abstract boolean includes(Interval interval);
+	
+	public abstract boolean includes(BothOpened interval);
+	
+	public abstract boolean includes(RightOpened interval);
+	
+	public abstract boolean includes(LeftOpened interval);
+	
+	public abstract boolean includes(UnOpened interval);
 
 	public boolean intersectsWith(Interval interval) {
 		// TODO
