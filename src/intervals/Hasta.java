@@ -8,26 +8,84 @@ public class Hasta extends Punto {
 
 	@Override
 	public boolean isGreater(Punto punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return punto.isLessThan(this);
 	}
 
 	@Override
 	public boolean isLessThan(Desde punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.valor > punto.valor;
 	}
 
 	@Override
 	public boolean isLessThan(Hasta punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.valor < punto.valor ;
 	}
 
 	@Override
 	public boolean isLessThan(Exacto punto) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.valor == punto.valor;
 	}
+
+	@Override
+	public boolean isLower(Punto punto) {
+		return punto.isGreaterThan(this);
+	}
+
+	@Override
+	public boolean isGreaterThan(Desde punto) {
+		return this.valor < punto.valor ;
+	}
+
+	@Override
+	public boolean isGreaterThan(Hasta punto) {
+		return this.valor > punto.valor ;
+	}
+
+	@Override
+	public boolean isGreaterThan(Exacto punto) {
+		return this.valor == punto.valor ;
+	}
+
+	@Override
+	public boolean lessOrEquals(Punto punto) {
+		return punto.isGreaterOrEqualsThan(this);
+	}
+
+	@Override
+	public boolean isGreaterOrEqualsThan(Desde punto) {
+		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+	}
+
+	@Override
+	public boolean isGreaterOrEqualsThan(Hasta punto) {
+		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+	}
+
+	@Override
+	public boolean isGreaterOrEqualsThan(Exacto punto) {
+		return this.valor == punto.valor;
+	}
+
+	@Override
+	public boolean greaterOrEquals(Punto punto) {
+		return punto.isLessOrEquals(this);
+	}
+
+	@Override
+	public boolean isLessOrEquals(Desde punto) {
+		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+	}
+
+	@Override
+	public boolean isLessOrEquals(Hasta punto) {
+		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+	}
+
+	@Override
+	public boolean isLessOrEquals(Exacto punto) {
+		return this.valor == punto.valor;
+	}
+
+	
 
 }
