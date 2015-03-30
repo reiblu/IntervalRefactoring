@@ -24,17 +24,17 @@ public class Hasta extends Punto {
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Desde punto) {
-		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor >= punto.valor);
 	}
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Hasta punto) {
-		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor >= punto.valor);
 	}
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Exacto punto) {
-		return this.valor == punto.valor;
+		return isGreaterThan(punto);
 	}
 
 	@Override
@@ -44,17 +44,17 @@ public class Hasta extends Punto {
 
 	@Override
 	public boolean isLessOrEquals(Desde punto) {
-		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor <= punto.valor);
 	}
 
 	@Override
 	public boolean isLessOrEquals(Hasta punto) {
-		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor <= punto.valor);
 	}
 
 	@Override
 	public boolean isLessOrEquals(Exacto punto) {
-		return this.valor == punto.valor;
+		return isLessThan(punto);
 	}
 
 	
