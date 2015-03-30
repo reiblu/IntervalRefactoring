@@ -2,20 +2,18 @@ package intervals;
 
 public abstract class Interval {
 
-	protected double minimum;
+	protected Punto minimum;
 
-	protected double maximum;
+	protected Punto maximum;
 
-	public Interval(double minimum, double maximum) {
-		this.minimum = minimum;
-		this.maximum = maximum;
-
+	public Interval() {
+	
 	}
 
 	public abstract Opening getOpening();
 
 	public double midPoint() {
-		return (minimum + maximum) / 2;
+		return (minimum.valor + maximum.valor) / 2;
 	}
 
 	public abstract boolean includes(double value);
@@ -31,24 +29,20 @@ public abstract class Interval {
 	public abstract boolean isIncluded(UnOpened interval);
 
 	public boolean intersectsWith(Interval interval) {
-		// TODO
 		return false;
 	}
 
 	public Interval intersection(Interval interval) {
-		// TODO
 		return null;
 	}
 
 	@Override
 	public String toString() {
-		// TODO
 		return null;
 	}
 
 	@Override
 	public boolean equals(Object object) {
-		// TODO
 		return false;
 	}
 }
