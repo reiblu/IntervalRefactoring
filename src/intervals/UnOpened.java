@@ -14,12 +14,6 @@ public class UnOpened extends Interval {
 	}
 
 	@Override
-	public boolean includes(double value) {
-		Cerrado valor = new Cerrado(value);
-		return (this.minimum.lessOrEquals(valor)) && (this.maximum.greaterOrEquals(valor));
-	}
-
-	@Override
 	public boolean includes(Interval interval) {
 		return this.minimum.isGreaterThan(interval.minimum) && this.maximum.lessOrEquals(interval.maximum);
 	}

@@ -16,7 +16,10 @@ public abstract class Interval {
 		return (minimum.valor + maximum.valor) / 2;
 	}
 
-	public abstract boolean includes(double value);
+	public boolean includes(double value){
+		Cerrado valor = new Cerrado(value);
+		return (this.minimum.lessOrEquals(valor)) && (this.maximum.greaterOrEquals(valor));
+	}
 
 	public abstract boolean includes(Interval interval);
 
