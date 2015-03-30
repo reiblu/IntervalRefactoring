@@ -1,8 +1,8 @@
 package intervals;
 
-public class Exacto extends Punto {
+public class Cerrado extends Punto {
 
-	public Exacto(double valor) {
+	public Cerrado(double valor) {
 		super(valor);
 	}
 
@@ -27,12 +27,7 @@ public class Exacto extends Punto {
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Hasta punto) {
-		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
-	}
-
-	@Override
-	public boolean isGreaterOrEqualsThan(Exacto punto) {
+	public boolean isGreaterOrEqualsThan(Cerrado punto) {
 		return this.valor == punto.valor;
 	}
 
@@ -47,12 +42,7 @@ public class Exacto extends Punto {
 	}
 
 	@Override
-	public boolean isLessOrEquals(Hasta punto) {
-		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
-	}
-
-	@Override
-	public boolean isLessOrEquals(Exacto punto) {
+	public boolean isLessOrEquals(Cerrado punto) {
 		return this.valor == punto.valor;
 	}
 

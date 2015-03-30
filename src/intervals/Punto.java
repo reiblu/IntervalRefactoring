@@ -16,12 +16,12 @@ public abstract class Punto {
 
 	public abstract boolean isGreaterOrEqualsThan(Abierto punto);
 	
-	public abstract boolean isGreaterOrEqualsThan(Exacto punto);
+	public abstract boolean isGreaterOrEqualsThan(Cerrado punto);
 
 	public abstract boolean greaterOrEquals(Punto punto);
 	
 	public abstract boolean isLessOrEquals(Abierto punto);
 	
-	public abstract boolean isLessOrEquals(Exacto punto);
+	public abstract boolean isLessOrEquals(Cerrado punto);
 
 }

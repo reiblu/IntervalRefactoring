@@ -27,12 +27,7 @@ public class Abierto extends Punto {
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Hasta punto) {
-		return (this.valor >= punto.valor);
-	}
-
-	@Override
-	public boolean isGreaterOrEqualsThan(Exacto punto) {
+	public boolean isGreaterOrEqualsThan(Cerrado punto) {
 		return isGreaterThan(punto) ;
 	}
 
@@ -47,12 +42,7 @@ public class Abierto extends Punto {
 	}
 
 	@Override
-	public boolean isLessOrEquals(Hasta punto) {
-		return (this.valor <= punto.valor);
-	}
-
-	@Override
-	public boolean isLessOrEquals(Exacto punto) {
+	public boolean isLessOrEquals(Cerrado punto) {
 		return isLessThan(punto);
 	}
 
