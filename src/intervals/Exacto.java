@@ -7,18 +7,8 @@ public class Exacto extends Punto {
 	}
 
 	@Override
-	public boolean isGreater(Punto punto) {
-		return punto.isLessThan(this);
-	}
-
-	@Override
 	public boolean isLessThan(Punto punto) {
 		return this.valor < punto.valor ;
-	}
-
-	@Override
-	public boolean isLower(Punto punto) {
-		return punto.isGreaterThan(this);
 	}
 
 	@Override
