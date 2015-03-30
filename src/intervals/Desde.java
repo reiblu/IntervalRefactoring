@@ -23,12 +23,12 @@ public class Desde extends Punto {
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Desde punto) {
-		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor >= punto.valor);
 	}
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Hasta punto) {
-		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor >= punto.valor);
 	}
 
 	@Override
@@ -43,12 +43,12 @@ public class Desde extends Punto {
 
 	@Override
 	public boolean isLessOrEquals(Desde punto) {
-		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor <= punto.valor);
 	}
 
 	@Override
 	public boolean isLessOrEquals(Hasta punto) {
-		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
+		return (this.valor <= punto.valor);
 	}
 
 	@Override
