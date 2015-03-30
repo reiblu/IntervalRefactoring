@@ -15,7 +15,8 @@ public class RightOpened extends Interval {
 
 	@Override
 	public boolean includes(double value) {
-		return (this.minimum <= value) && (this.maximum > value);
+		Cerrado valor = new Cerrado(value);
+		return (this.minimum.lessOrEquals(valor)) && (this.maximum.isGreaterThan(valor));
 	}
 
 	@Override
