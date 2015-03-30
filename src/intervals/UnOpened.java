@@ -3,7 +3,9 @@ package intervals;
 public class UnOpened extends Interval {
 	
 	public UnOpened(double minimum, double maximum) {
-		super(minimum, maximum);
+		super();
+		this.minimum = new Cerrado(minimum);
+		this.maximum = new Abierto(maximum);
 	}
 
 	@Override
@@ -18,27 +20,8 @@ public class UnOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return interval.isIncluded(this);
+		return this.minimum.isGreaterThan(interval.minimum) && this.maximum.lessOrEquals(interval.maximum);
 	}
 
-	@Override
-	public boolean isIncluded(BothOpened interval) {
-		return this.minimum > interval.minimum && this.maximum < interval.maximum;
-	}
-
-	@Override
-	public boolean isIncluded(RightOpened interval) {
-		return this.minimum >= interval.minimum && this.maximum < interval.maximum;
-	}
-
-	@Override
-	public boolean isIncluded(LeftOpened interval) {
-		return this.minimum > interval.minimum && this.maximum <= interval.maximum;
-	}
-
-	@Override
-	public boolean isIncluded(UnOpened interval) {
-		return this.minimum >= interval.minimum && this.maximum <= interval.maximum;
-	}
 
 }

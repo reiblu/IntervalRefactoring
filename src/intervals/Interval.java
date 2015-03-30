@@ -20,14 +20,6 @@ public abstract class Interval {
 
 	public abstract boolean includes(Interval interval);
 
-	public abstract boolean isIncluded(BothOpened interval);
-
-	public abstract boolean isIncluded(RightOpened interval);
-
-	public abstract boolean isIncluded(LeftOpened interval);
-
-	public abstract boolean isIncluded(UnOpened interval);
-
 	public boolean intersectsWith(Interval interval) {
 		return false;
 	}
