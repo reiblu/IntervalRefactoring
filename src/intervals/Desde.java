@@ -12,18 +12,8 @@ public class Desde extends Punto {
 	}
 
 	@Override
-	public boolean isLessThan(Desde punto) {
+	public boolean isLessThan(Punto punto) {
 		return this.valor < punto.valor ;
-	}
-
-	@Override
-	public boolean isLessThan(Hasta punto) {
-		return this.valor > punto.valor;
-	}
-
-	@Override
-	public boolean isLessThan(Exacto punto) {
-		return this.valor == punto.valor;
 	}
 	
 	@Override
