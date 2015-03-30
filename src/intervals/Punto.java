@@ -8,9 +8,13 @@ public abstract class Punto {
 		this.valor = valor;
 	}
 	
-	public abstract boolean isLessThan(Punto punto);
+	public boolean isLessThan(Punto punto){
+		return this.valor < punto.valor ;
+	}
 	
-	public abstract boolean isGreaterThan(Punto punto);
+	public boolean isGreaterThan(Punto punto){
+		return this.valor > punto.valor ;
+	}
 	
 	public abstract boolean lessOrEquals(Punto punto);
 

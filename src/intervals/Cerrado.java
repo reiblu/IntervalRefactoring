@@ -7,16 +7,6 @@ public class Cerrado extends Punto {
 	}
 
 	@Override
-	public boolean isLessThan(Punto punto) {
-		return this.valor < punto.valor ;
-	}
-
-	@Override
-	public boolean isGreaterThan(Punto punto) {
-		return this.valor > punto.valor ;
-	}
-
-	@Override
 	public boolean lessOrEquals(Punto punto) {
 		return punto.isGreaterOrEqualsThan(this);
 	}
