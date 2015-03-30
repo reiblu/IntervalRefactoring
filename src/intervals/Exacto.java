@@ -22,7 +22,7 @@ public class Exacto extends Punto {
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Desde punto) {
+	public boolean isGreaterOrEqualsThan(Abierto punto) {
 		return (this.valor > punto.valor) || (this.valor == punto.valor) ;
 	}
 
@@ -42,7 +42,7 @@ public class Exacto extends Punto {
 	}
 
 	@Override
-	public boolean isLessOrEquals(Desde punto) {
+	public boolean isLessOrEquals(Abierto punto) {
 		return (this.valor < punto.valor) || (this.valor == punto.valor) ;
 	}
 

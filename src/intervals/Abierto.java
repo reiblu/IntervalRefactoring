@@ -1,11 +1,10 @@
 package intervals;
 
-public class Hasta extends Punto {
+public class Abierto extends Punto {
 
-	public Hasta(double valor) {
+	public Abierto(double valor) {
 		super(valor);
 	}
-
 
 	@Override
 	public boolean isLessThan(Punto punto) {
@@ -23,7 +22,7 @@ public class Hasta extends Punto {
 	}
 
 	@Override
-	public boolean isGreaterOrEqualsThan(Desde punto) {
+	public boolean isGreaterOrEqualsThan(Abierto punto) {
 		return (this.valor >= punto.valor);
 	}
 
@@ -34,7 +33,7 @@ public class Hasta extends Punto {
 
 	@Override
 	public boolean isGreaterOrEqualsThan(Exacto punto) {
-		return isGreaterThan(punto);
+		return isGreaterThan(punto) ;
 	}
 
 	@Override
@@ -43,7 +42,7 @@ public class Hasta extends Punto {
 	}
 
 	@Override
-	public boolean isLessOrEquals(Desde punto) {
+	public boolean isLessOrEquals(Abierto punto) {
 		return (this.valor <= punto.valor);
 	}
 
@@ -56,6 +55,8 @@ public class Hasta extends Punto {
 	public boolean isLessOrEquals(Exacto punto) {
 		return isLessThan(punto);
 	}
+
+	
 
 	
 
