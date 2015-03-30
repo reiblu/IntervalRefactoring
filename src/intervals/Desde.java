@@ -53,7 +53,7 @@ public class Desde extends Punto {
 
 	@Override
 	public boolean isLessOrEquals(Exacto punto) {
-		return this.valor < punto.valor;
+		return isLessThan(punto);
 	}
 
 	
