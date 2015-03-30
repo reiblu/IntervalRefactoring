@@ -5,7 +5,7 @@ public class UnOpened extends Interval {
 	public UnOpened(double minimum, double maximum) {
 		super();
 		this.minimum = new Cerrado(minimum);
-		this.maximum = new Abierto(maximum);
+		this.maximum = new Cerrado(maximum);
 	}
 
 	@Override
@@ -15,7 +15,7 @@ public class UnOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return this.minimum.isGreaterThan(interval.minimum) && this.maximum.lessOrEquals(interval.maximum);
+		return this.minimum.lessOrEquals(interval.minimum) && this.maximum.greaterOrEquals(interval.maximum);
 	}
 
 

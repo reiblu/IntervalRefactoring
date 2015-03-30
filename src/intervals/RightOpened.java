@@ -15,7 +15,7 @@ public class RightOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return this.minimum.greaterOrEquals(interval.minimum) && this.maximum.lessOrEquals(interval.maximum);
+		return this.minimum.lessOrEquals(interval.minimum) && this.maximum.greaterOrEquals(interval.maximum);
 
 	}
 

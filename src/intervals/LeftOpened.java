@@ -4,8 +4,8 @@ public class LeftOpened extends Interval {
 	
 	public LeftOpened(double minimum, double maximum) {
 		super();
-		this.minimum = new Cerrado(minimum);
-		this.maximum = new Abierto(maximum);
+		this.minimum = new Abierto(minimum);
+		this.maximum = new Cerrado(maximum);
 	}
 
 	@Override
@@ -15,7 +15,7 @@ public class LeftOpened extends Interval {
 
 	@Override
 	public boolean includes(Interval interval) {
-		return this.minimum.greaterOrEquals(interval.minimum) && this.maximum.lessOrEquals(interval.maximum);
+		return this.minimum.lessOrEquals(interval.minimum) && this.maximum.greaterOrEquals(interval.maximum);
 	}
 
 
